@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dụng Cụ Điện Nước Chuyên Nghiệp | ĐỨC ĐIỆN NƯỚC</title>
+    <!-- Tải Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Cấu hình Tailwind cho màu sắc và font chữ Inter -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#007bff', // Xanh dương cho điện và nước
+                        'secondary': '#ffc107', // Vàng cam cho cảnh báo/nổi bật
+                        'dark-bg': '#1f2937', // Nền tối
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Tải thư viện Icon Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Đảm bảo cuộn mượt mà */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+
+    <!-- Thanh Điều Hướng (Header) -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <!-- Logo -->
+            <a href="#hero" class="text-2xl font-bold text-primary flex items-center">
+                <i data-lucide="wrench" class="h-6 w-6 mr-2 text-secondary"></i>
+                ĐỨC ĐIỆN NƯỚC
+            </a>
+            
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex space-x-6 text-gray-600 font-medium">
+                <a href="#san-pham" class="hover:text-primary transition duration-300">Sản Phẩm</a>
+                <a href="#tinh-nang" class="hover:text-primary transition duration-300">Tại Sao Chọn Chúng Tôi</a>
+                <a href="#lien-he" class="bg-primary text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">Liên Hệ Ngay</a>
+            </nav>
+
+            <!-- Nút Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-primary focus:outline-none">
+                <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+        </div>
+
+        <!-- Menu Mobile (Ẩn/Hiện) -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4 bg-white border-t border-gray-100">
+            <nav class="flex flex-col space-y-2 px-4">
+                <a href="#san-pham" class="block py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Sản Phẩm</a>
+                <a href="#tinh-nang" class="block py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Tại Sao Chọn Chúng Tôi</a>
+                <a href="#lien-he" class="block py-2 text-primary hover:bg-gray-100 rounded-lg">Liên Hệ Ngay</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. Khu Vực Giới Thiệu (Hero Section) -->
+    <section id="hero" class="bg-dark-bg text-white py-20 md:py-32 rounded-b-xl shadow-2xl">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight animate-pulse">
+                Giải Pháp Toàn Diện Cho Công Trình Điện & Nước
+            </h1>
+            <p class="text-lg sm:text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
+                Cung cấp dụng cụ chất lượng cao, bền bỉ, an toàn, giúp bạn hoàn thành công việc nhanh chóng và hiệu quả.
+            </p>
+            <div class="space-x-4">
+                <a href="#san-pham" class="inline-block bg-secondary text-dark-bg font-bold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-400 transition transform hover:scale-105 duration-300">
+                    Khám Phá Sản Phẩm
+                </a>
+                <a href="#lien-he" class="inline-block border border-white text-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-dark-bg transition duration-300 mt-4 sm:mt-0">
+                    Tư Vấn Miễn Phí
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Danh Mục Sản Phẩm -->
+    <section id="san-pham" class="py-16 md:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Dòng Sản Phẩm Chủ Lực</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Danh Mục 1: Dụng Cụ Điện -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary group">
+                    <div class="flex items-center justify-center h-16 w-16 bg-blue-100 text-primary rounded-full mb-4 mx-auto group-hover:scale-110 transition duration-300">
+                        <i data-lucide="plug-zap" class="h-8 w-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-3">Dụng Cụ Điện</h3>
+                    <p class="text-gray-600 text-center text-sm">Máy khoan, máy cắt, máy mài, dụng cụ đo điện chuyên dụng, đảm bảo an toàn tuyệt đối.</p>
+                </div>
+
+                <!-- Danh Mục 2: Dụng Cụ Nước -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary group">
+                    <div class="flex items-center justify-center h-16 w-16 bg-blue-100 text-primary rounded-full mb-4 mx-auto group-hover:scale-110 transition duration-300">
+                        <i data-lucide="droplets" class="h-8 w-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-3">Dụng Cụ Nước (Cấp Thoát)</h3>
+                    <p class="text-gray-600 text-center text-sm">Kìm bấm ống, máy hàn ống PPR, dụng cụ thông tắc, cờ lê và mỏ lết chất lượng cao.</p>
+                </div>
+                
+                <!-- Danh Mục 3: Thiết Bị Đo Lường & Bảo Hộ -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary group">
+                    <div class="flex items-center justify-center h-16 w-16 bg-blue-100 text-primary rounded-full mb-4 mx-auto group-hover:scale-110 transition duration-300">
+                        <i data-lucide="ruler" class="h-8 w-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-3">Đo Lường & Bảo Hộ</h3>
+                    <p class="text-gray-600 text-center text-sm">Đồng hồ vạn năng, máy dò dây, găng tay cách điện, kính bảo hộ tiêu chuẩn công nghiệp.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Sản Phẩm Nổi Bật -->
+    <section id="featured" class="py-16 bg-gray-100 md:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Sản Phẩm Nổi Bật</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Sản Phẩm 1: Máy Khoan Đa Năng -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-[1.02] duration-300">
+                    <img src="https://placehold.co/600x400/007bff/ffffff?text=Máy+Khoan+Đa+Năng" alt="Máy Khoan Đa Năng" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h4 class="text-lg font-bold mb-1">Máy Khoan Búa 800W</h4>
+                        <p class="text-primary font-semibold mb-3">990.000 VNĐ</p>
+                        <p class="text-sm text-gray-600 mb-4">Công suất mạnh mẽ, 3 chế độ: khoan, búa, bắt vít.</p>
+                        <a href="#" class="block text-center bg-secondary text-dark-bg py-2 rounded-lg text-sm font-medium hover:bg-yellow-400">Xem Chi Tiết</a>
+                    </div>
+                </div>
+
+                <!-- Sản Phẩm 2: Kìm Đa Năng Cho Thợ Nước -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-[1.02] duration-300">
+                    <img src="https://placehold.co/600x400/007bff/ffffff?text=Kìm+Đa+Năng+Nước" alt="Kìm Đa Năng" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h4 class="text-lg font-bold mb-1">Kìm Bấm Ống Cỡ Lớn</h4>
+                        <p class="text-primary font-semibold mb-3">350.000 VNĐ</p>
+                        <p class="text-sm text-gray-600 mb-4">Lưỡi thép không gỉ, tay cầm chống trượt, cắt ống PVC/PPR.</p>
+                        <a href="#" class="block text-center bg-secondary text-dark-bg py-2 rounded-lg text-sm font-medium hover:bg-yellow-400">Xem Chi Tiết</a>
+                    </div>
+                </div>
+
+                <!-- Sản Phẩm 3: Đồng Hồ Vạn Năng Kỹ Thuật Số -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-[1.02] duration-300">
+                    <img src="https://placehold.co/600x400/007bff/ffffff?text=Đồng+Hồ+Vạn+Năng" alt="Đồng Hồ Vạn Năng" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h4 class="text-lg font-bold mb-1">Đồng Hồ KTS Chống Cháy</h4>
+                        <p class="text-primary font-semibold mb-3">580.000 VNĐ</p>
+                        <p class="text-sm text-gray-600 mb-4">Đo điện áp, dòng điện, điện trở, tự động ngắt khi quá tải.</p>
+                        <a href="#" class="block text-center bg-secondary text-dark-bg py-2 rounded-lg text-sm font-medium hover:bg-yellow-400">Xem Chi Tiết</a>
+                    </div>
+                </div>
+
+                <!-- Sản Phẩm 4: Bộ Tua Vít Cách Điện -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-[1.02] duration-300">
+                    <img src="https://placehold.co/600x400/007bff/ffffff?text=Bộ+Tua+Vít+Cách+Điện" alt="Bộ Tua Vít Cách Điện" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h4 class="text-lg font-bold mb-1">Bộ Tua Vít Cách Điện VDE</h4>
+                        <p class="text-primary font-semibold mb-3">420.000 VNĐ</p>
+                        <p class="text-sm text-gray-600 mb-4">Cách điện 1000V, thép hợp kim Chrome Vanadium.</p>
+                        <a href="#" class="block text-center bg-secondary text-dark-bg py-2 rounded-lg text-sm font-medium hover:bg-yellow-400">Xem Chi Tiết</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Tại Sao Chọn Chúng Tôi (Features) -->
+    <section id="tinh-nang" class="py-16 md:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Tại Sao Chọn POWERMAX?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Feature 1 -->
+                <div class="text-center p-6 bg-white rounded-xl shadow-md border-b-4 border-secondary">
+                    <i data-lucide="shield-check" class="h-10 w-10 text-secondary mx-auto mb-3"></i>
+                    <h4 class="font-bold text-lg mb-2">Chất Lượng Đảm Bảo</h4>
+                    <p class="text-gray-600 text-sm">Tất cả sản phẩm đều qua kiểm định nghiêm ngặt, đạt tiêu chuẩn an toàn.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="text-center p-6 bg-white rounded-xl shadow-md border-b-4 border-secondary">
+                    <i data-lucide="package" class="h-10 w-10 text-secondary mx-auto mb-3"></i>
+                    <h4 class="font-bold text-lg mb-2">Bảo Hành Dài Hạn</h4>
+                    <p class="text-gray-600 text-sm">Chính sách bảo hành lên đến 24 tháng cho các thiết bị điện tử.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="text-center p-6 bg-white rounded-xl shadow-md border-b-4 border-secondary">
+                    <i data-lucide="truck" class="h-10 w-10 text-secondary mx-auto mb-3"></i>
+                    <h4 class="font-bold text-lg mb-2">Giao Hàng Toàn Quốc</h4>
+                    <p class="text-gray-600 text-sm">Giao hàng siêu tốc trong 48h, miễn phí vận chuyển cho đơn hàng lớn.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="text-center p-6 bg-white rounded-xl shadow-md border-b-4 border-secondary">
+                    <i data-lucide="award" class="h-10 w-10 text-secondary mx-auto mb-3"></i>
+                    <h4 class="font-bold text-lg mb-2">Giá Tốt Nhất</h4>
+                    <p class="text-gray-600 text-sm">Giá cạnh tranh trực tiếp từ nhà sản xuất, chiết khấu cao cho đại lý.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Khu Vực Liên Hệ (CTA & Form) -->
+    <section id="lien-he" class="py-16 bg-primary md:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-xl shadow-2xl p-8 md:p-12 max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-dark-bg mb-4">Bạn Cần Tư Vấn Sản Phẩm?</h2>
+                <p class="text-center text-gray-600 mb-8">Hãy điền vào mẫu dưới đây, đội ngũ kỹ thuật viên của chúng tôi sẽ liên hệ lại trong vòng 30 phút.</p>
+                
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Tên của bạn:</label>
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Số Điện Thoại:</label>
+                        <input type="tel" id="phone" name="phone" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Nội dung quan tâm:</label>
+                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-primary text-white font-bold py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300 transform hover:scale-[1.01]">
+                        Gửi Yêu Cầu Tư Vấn
+                    </button>
+                    
+                    <p id="form-message" class="text-center mt-4 hidden text-sm font-medium text-green-600"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg text-white py-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-4">
+                <p class="text-xl font-bold mb-1">POWERMAX Tools</p>
+                <p class="text-sm text-gray-400">Cửa hàng Đức Điện Nước</p>
+                <p class="text-sm text-gray-400">Địa chỉ: 123 Nguyễn Thị Thập, Quận 7</p>
+                <p class="text-sm text-gray-400">Hotline: 032 779 1913 | Email: ducdiennuoc@gmail.vn</p>
+            </div>
+            
+            <div class="flex justify-center space-x-4 mb-6">
+                <a href="#" class="text-gray-400 hover:text-primary transition duration-300"><i data-lucide="facebook" class="h-6 w-6"></i></a>
+                <a href="#" class="text-gray-400 hover:text-primary transition duration-300"><i data-lucide="instagram" class="h-6 w-6"></i></a>
+                <a href="#" class="text-gray-400 hover:text-primary transition duration-300"><i data-lucide="youtube" class="h-6 w-6"></i></a>
+            </div>
+
+            <p class="text-sm text-gray-500 border-t border-gray-700 pt-4">
+                &copy; 2025 POWERMAX Tools. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript cho chức năng Toggle Menu và Xử lý Form -->
+    <script>
+        // 1. Tải icon Lucide (Chạy sau khi HTML đã load)
+        lucide.createIcons();
+
+        // 2. Chức năng Toggle Menu Mobile
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Tự động đóng menu khi chọn link trên mobile
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 3. Xử lý Form Liên Hệ (Mô phỏng gửi thành công)
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Ẩn form và hiển thị thông báo thành công
+            formMessage.textContent = 'Yêu cầu tư vấn của bạn đã được gửi thành công! Chúng tôi sẽ liên hệ lại sớm nhất.';
+            formMessage.classList.remove('hidden', 'text-red-600');
+            formMessage.classList.add('text-green-600', 'p-3', 'bg-green-50', 'rounded-lg');
+            
+            // Xóa nội dung form sau 3 giây và ẩn thông báo
+            setTimeout(() => {
+                contactForm.reset();
+                formMessage.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
